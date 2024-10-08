@@ -6,33 +6,70 @@
 <title>Document</title> 
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous"> 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script> 
-<script src="formulario.css"></script>
+<link rel="stylesheet" href="formulario.css">
 </head> 
 <body> 
-    <form>
+    <form name="formulario" method="POST" action="formulario.php">
         <div class="mb-3">
-            <label for="exampleFormControlInput1" class="form-label">Correo electrónico</label>
-            <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+            <label for="exampleFormControlInput1" class="form-label">Nombre:</label>
+            <input type="text" name="nombre" class="form-control" placeholder="Introduzca el nombre" aria-label="Introduzca su nombre">
         </div>
         <div class="mb-3">
-            <label for="exampleFormControlTextarea1" class="form-label">Ejemplo de textarea</label>
-            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+            <label for="exampleFormControlInput1" class="form-label">Apellido:</label>
+            <input type="text" name="apellidos" class="form-control" placeholder="Introduzca el apellido" aria-label="Introduzca su nombre">
+        </div>
+        <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Correo electrónico</label>
+            <input type="email" name="correo" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+        </div>
+        <div class="mb-3">
+            <label for="exampleFormControlTextarea1" class="form-label">Enlace página personal</label>
+            <textarea name="url" placeholder="Inserte URL" class="form-control" id="exampleFormControlTextarea1"></textarea>
         </div>
         <div class="mb-3">
             <label for="exampleFormControlTextarea1" class="form-label">Sexo:</label>
-            <select class="form-select" aria-label="Elige sexo">
-                <option value="M">Hombre</option> 
-                <option value="F">Mujer</option> 
+            <select name="sexo" class="form-select" aria-label="Elige sexo">
+                <option value="Hombre">Hombre</option> 
+                <option value="Mujer">Mujer</option> 
             </select> 
         </div>
         <div class="mb-3">
-            <label for="exampleFormControlInput1" class="form-label">First name:</label>
-                <input type="text" id="fname" name="fname"><br>
+            <label for="exampleFormControlInput1" class="form-label">Número de convivientes en el domicilio:</label>
+            <input type="number" name="n_convivie" class="form-control" placeholder="Introduzca el número" aria-label="Introduzca su nombre">
         </div>
-        <div class="mb-3">
-        <label for="exampleFormControlInput1" class="form-label">First name:</label>
-            <input type="text" id="lname" name="lname">
+        <div class="form-check">
+            <input class="form-check-input" name="aficiones[]" type="checkbox"  value="Petanca" id="flexCheckDefault">
+            <label class="form-check-label"  for="flexCheckDefault">
+                Petanca
+            </label> 
         </div>
+        <div class="form-check">
+            <input class="form-check-input" name="aficiones[]" type="checkbox"  value="Cocina" id="flexCheckDefault">
+            <label class="form-check-label"  for="flexCheckDefault">
+                Cocina
+            </label> 
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" name="aficiones[]" type="checkbox" value="Hockey" id="flexCheckDefault">
+            <label class="form-check-label"  for="flexCheckDefault">
+                Hockey
+            </label> 
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" name="aficiones[]" type="checkbox" value="Cultivo" id="flexCheckDefault">
+            <label class="form-check-label ultimo-check" for="flexCheckDefault">
+                Cultivo
+            </label> 
+        </div>
+        <label for="exampleDataList" class="form-label">Menú favorito</label>
+        <select name="menu[]" class="form-select" aria-label="Default select example" multiple>
+            <option value="Spag Hetti">Spag Hetti</option>
+            <option value="Mac Arron">Mac Arron</option>
+            <option value="Las Aña">Las Aña</option>
+            <option value="Keb Abh">Keb Abh</option>
+            <option value="P. Izza">P. Izza</option>
+            </select>
+    <input type="submit" id="submit"> 
     </form> 
 </body> 
 
