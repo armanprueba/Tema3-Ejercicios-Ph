@@ -20,6 +20,9 @@ form{
     color: #ffffff;
 }
 
+.form-control{
+    background-color: #163785;
+}
 .ultimo-check{
     margin-bottom: 8px;
 }
@@ -28,8 +31,6 @@ form{
     background-color: #163785;
     color: #ffffff;
 }
-
-
 
 #submit{
     background-color: #E01A4F;
