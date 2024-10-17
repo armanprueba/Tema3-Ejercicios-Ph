@@ -13,6 +13,7 @@ form{
 
 .form-control{
     background-color: #163785;
+    color: #ffffff;
 }
 
 .form-control::placeholder {
