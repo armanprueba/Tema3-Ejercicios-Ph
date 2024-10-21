@@ -7,13 +7,15 @@
 </head>
 <body>
 <?php
-    echo "Ruta del sitio web en el ordenador local: $ruta_local <br>";
-    /*foreach ($files2 as $imagen){
-        echo '<img src="'.$imagen.'">';
-    }*/
-    print_r($files2);
-    for($i=2; $i<count($files2); $i++) {	
-            echo $files2[$i];
+    echo "Ruta del sitio web en el ordenador local:". $ruta_local. "<br>";
+    echo "Ruta imagen: ". $ruta_imagen;
+    echo '<img src="uploads/'.$nombre_img.'">';
+    echo 'Nombre = '. $$nombre_img;;
+    echo 'Tamaño = '. $tamaño;
+
+    for($i=2; $i<count($files); $i++) {	
+            echo $files[$i];
+            echo '<img src="uploads/'.$files[$i].'">';
     }        
     //header("Refresh:5; url=subidaImagen.html");
     echo '<p>En 5 segundos volveremos página principal.</p>';

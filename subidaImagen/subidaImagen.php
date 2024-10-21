@@ -1,13 +1,19 @@
 <?php
 if (isset($_POST['btnSubir']) && $_POST['btnSubir'] == "Subir"){
-     if(is_uploaded_file($_FILES["imagen"]['tmp_name'])){
+   $tipo_img = $_FILES["imagen"]["type"];
+
+     if($tipo_img == "image/png" || $tipo_img == "image/jpeg" || $tipo_img == "image/gif"){
         $nombre_img = $_FILES["imagen"]["name"];
-        $tipo_img = $_FILES["imagen"]["type"];
-        move_uploaded_file($_FILES['imagen']['tmp_name'], "uploads/{$nombre_img}");
-        $files2 = scandir("uploads");
+        $ruta_imagen = $_FILES["imagen"]["tmp_name"];
+        $tamaño_imagen = $_FILES["imagen"]["size"];
+        move_uploaded_file($ruta_imagen, "uploads/{$nombre_img}");
+        $files = scandir("uploads");
         $ruta_local = $_SERVER['SCRIPT_NAME'];  //Ruta del sitio web en el ordenador local
-        echo "f";
         include("subidaImagen.view.php");
+     }
+     else{
+     header("Location:imagenerror.php");
+         exit();      
      }
     }
 
