@@ -9,29 +9,10 @@
 <link rel="stylesheet" href="../css/formulario.css">
 </head> 
 <body>
-    <form name="login" method="POST" action="subidaImagen.php">
+    <form name="login" method="POST" action="subidaImagen.php" enctype="multipart/form-data">
     <label class="form-label" for="customFile">Introduce una imágen</label>
     <input type="file" name="imagen" class="form-control" id="customFile" accept="image/png, image/gif, image/jpeg"/>
-    <input type="submit" id="submit"> 
+    <input type="submit" id="submit" name="btnSubir" value="Subir"> 
     </form>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
