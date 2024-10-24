@@ -1,0 +1,14 @@
+th, td{
+    padding: 8px;
+}
+.bold-column{
+    font-weight: bold;
+}
+.tabla-mayores{
+    background-color: #e93157;
+}
+
+.tabla-votos{
+    background-color: #4bb8ba;
+    color: #ffffff;
+}
